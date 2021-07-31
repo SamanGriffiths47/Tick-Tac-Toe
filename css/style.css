@@ -1,4 +1,26 @@
 /* Play around with your CSS! Have fun with creating your own unique designs and playing around with different rules */
+body {
+  display: grid;
+
+  margin: 0;
+  padding: 0;
+}
 h1 {
   color: purple;
+}
+
+.scoreboard {
+  display: grid;
+}
+
+.tick-grid {
+  display: grid;
+}
+
+.toe-grid {
+  display: grid;
+}
+
+.winner {
+  display: grid;
 }
