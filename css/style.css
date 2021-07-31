@@ -1,26 +1,59 @@
 /* Play around with your CSS! Have fun with creating your own unique designs and playing around with different rules */
 body {
+  background: image-url('images/moss.jpeg');
+  height: 600px;
+  width: 800px;
   display: grid;
-
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr); /**adds up to ~820px**/
   margin: 0;
   padding: 0;
 }
 h1 {
+  grid-area: 1/1/6/2;
   color: purple;
+  background-color: blueviolet;
 }
 
 .scoreboard {
+  grid-area: ;
+
   display: grid;
+  background-color: thistle;
+}
+.scoreboard > div h4 {
+  grid-area: ;
+  display: grid;
+  border: 2px solid yellow;
 }
 
 .tick-grid {
+  grid-area: ;
   display: grid;
+  background-color: red;
+}
+.tick-grid > div {
+  display: inline-block;
+  border: 2px solid yellow;
 }
 
 .toe-grid {
+  grid-area: ;
   display: grid;
+  background-color: chartreuse;
+}
+.toe-grid > div {
+  display: inline-block;
+  border: 2px solid rgb(255, 0, 200);
 }
 
 .winner {
+  grid-area: ;
+
   display: grid;
+  background-color: darkblue;
+}
+.winner > div h2 {
+  display: inline-block;
+  border: 2px solid yellow;
 }
