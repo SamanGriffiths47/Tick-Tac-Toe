@@ -1,57 +1,154 @@
 /* Play around with your CSS! Have fun with creating your own unique designs and playing around with different rules */
 body {
-  background: image-url('images/moss.jpeg');
-  height: 600px;
-  width: 800px;
+  background-image: url('../images/forest.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 850px;
+  width: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr); /**adds up to ~820px**/
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
   margin: 0;
   padding: 0;
 }
 h1 {
-  grid-area: 1/1/6/2;
+  grid-area: 1/1/6/21;
   color: purple;
-  background-color: blueviolet;
+  background-color: rgba(132, 44, 214, 0.3);
 }
 
 .scoreboard {
-  grid-area: ;
+  grid-area: 8/5/11/11;
 
   display: grid;
-  background-color: thistle;
+  background-color: rgba(207, 185, 207, 0.664);
 }
 .scoreboard > div h4 {
-  grid-area: ;
   display: grid;
   border: 2px solid yellow;
 }
 
 .tick-grid {
-  grid-area: ;
+  grid-area: 8/13/16/18;
+
   display: grid;
-  background-color: red;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  background-color: rgba(255, 255, 255, 0.288);
 }
 .tick-grid > div {
-  display: inline-block;
-  border: 2px solid yellow;
+  grid-area: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+.tick1 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 0;
+}
+.tick2 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 0;
+}
+.tick3 {
+  border-bottom: 9px solid black;
+  opacity: 0;
+}
+.tick4 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 0;
+}
+.tick5 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 0;
+}
+.tick6 {
+  border-bottom: 9px solid black;
+  opacity: 0;
+}
+.tick7 {
+  border-right: 9px solid black;
+  opacity: 0;
+}
+.tick8 {
+  border-right: 9px solid black;
+  opacity: 0;
+}
+.tick9 {
+  opacity: 0;
 }
 
 .toe-grid {
-  grid-area: ;
+  grid-area: 8/13/16/18;
+
   display: grid;
-  background-color: chartreuse;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 .toe-grid > div {
-  display: inline-block;
-  border: 2px solid rgb(255, 0, 200);
+  grid-area: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+.toe1 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 1;
+}
+.toe2 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 1;
+}
+.toe3 {
+  border-bottom: 9px solid black;
+  opacity: 1;
+}
+.toe4 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 1;
+}
+.toe5 {
+  border-right: 9px solid black;
+  border-bottom: 9px solid black;
+  opacity: 1;
+}
+.toe6 {
+  border-bottom: 9px solid black;
+  opacity: 1;
+}
+.toe7 {
+  border-right: 9px solid black;
+  opacity: 1;
+}
+.toe8 {
+  border-right: 9px solid black;
+  opacity: 1;
+}
+.toe9 {
+  opacity: 1;
 }
 
 .winner {
-  grid-area: ;
+  grid-area: 1/1/6/21;
 
   display: grid;
-  background-color: darkblue;
+  background-color: rgba(18, 18, 190, 0.4);
 }
 .winner > div h2 {
   display: inline-block;
