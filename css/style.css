@@ -13,6 +13,57 @@ body {
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
 }
+
+.start-message {
+  grid-area: 4/1/21/21;
+
+  display: grid;
+  grid-template: 1fr 70% 1fr / 1fr 70% 1fr;
+
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.start {
+  grid-area: 2/2/3/3;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding-top: 90px;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: white;
+  font-size: 200px;
+}
+
+.win-message {
+  grid-area: 4/1/21/21;
+
+  display: grid;
+  grid-template: 1fr 70% 1fr / 1fr 70% 1fr;
+
+  background-color: rgba(0, 0, 0, 0.815);
+}
+.winner {
+  grid-area: 2/2/3/3;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+}
+.winner > h3 {
+  text-align: center;
+  font-size: 200px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.winner > p {
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: white;
+  display: inline-flex;
+  margin: 50px;
+  padding: 10px 25px 10px 25px;
+}
+
 h1 {
   grid-area: 1/1/6/21;
 
@@ -20,14 +71,17 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
 
-  padding: 30px 0 0 300px;
+  padding: 0 0 0 200px;
   color: white;
+  font-size: 50px;
 }
 
 /* Chalkbord Background */
 #chalkboard {
+  background-image: url('../images/chalkboard.png');
+  background-size: 100% 100%;
   grid-area: 7/3/13/11;
-  height: 500px;
+  height: 510px;
   width: 210%;
 }
 
@@ -104,11 +158,11 @@ h4 {
   padding: 0;
 }
 /* Images */
-#tick-sb {
+.tick-sb {
   height: 50px;
   width: 50px;
 }
-#toe-sb {
+.toe-sb {
   height: 50px;
   width: 50px;
 }
@@ -129,7 +183,7 @@ h4 {
   align-items: center;
 
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 /* Tick Grid Cells */
 .tick1 {
@@ -160,8 +214,9 @@ h4 {
 .tick8 {
   border-right: 9px solid black;
 }
+
 /* Tick Images */
-#tick1 {
+/* #tick1 {
   opacity: 0;
 }
 #tick2 {
@@ -171,7 +226,7 @@ h4 {
   opacity: 0;
 }
 #tick4 {
-  opacity: 1;
+  opacity: 0;
 }
 #tick5 {
   opacity: 0;
@@ -187,10 +242,10 @@ h4 {
 }
 #tick9 {
   opacity: 0;
-}
+} */
 
 /* Toe Grid */
-.toe-grid {
+/* .toe-grid {
   grid-area: 8/13/16/18;
 
   display: grid;
@@ -206,9 +261,10 @@ h4 {
 
   margin: 0;
   padding: 0;
-}
-/* Toe Images */
-#toe1 {
+} */
+
+/* Hidden Images */
+/* #toe1 {
   opacity: 0;
 }
 #toe2 {
@@ -234,10 +290,10 @@ h4 {
 }
 #toe9 {
   opacity: 0;
-}
+} */
 
 /* Winner display */
-.winner {
+/* .winner {
   grid-area: 8/5/16/18;
 
   display: grid;
@@ -253,9 +309,9 @@ h2 {
   justify-content: center;
   align-items: center;
   border: 2px solid yellow;
-}
+} */
 /* Image Containers */
-.tick-winner {
+/* .tick-winner {
   grid-area: 2/7/3/9;
   opacity: 0;
 }
@@ -263,7 +319,12 @@ h2 {
   grid-area: 2/7/3/9;
   opacity: 0;
 }
-/* Text */
+Text
 .winner > h2 {
   grid-area: 2/9/3/14;
-}
+} */
+
+/* Clicked Class */
+/* .clicked {
+  opacity: 1;
+} */
