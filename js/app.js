@@ -103,16 +103,22 @@ let winCheck = function (positionArray) {
       if (positionMatch > 2) {
         if (currentPlayer === 'x' && xPositions.length > oPositions.length) {
           x = x + 1
-          xPositions = []
-        } else if ('o' === currentPlayer) {
+          console.log(positionMatch)
+        } else if ((currentPlayer = 'o')) {
           o = o + 1
         }
         gameActive = false
         addEndScreen(winner)
-      } else drawCheck()
+      }
     }
   }
+  positionMatch = 0
   switches(positionArray)
+  if (playCount.length === 9 && positionMatch === 0) {
+    draws = draws + 1
+    gameActive = false
+    addEndScreen(draw)
+  }
 }
 
 // Board Click Functions
