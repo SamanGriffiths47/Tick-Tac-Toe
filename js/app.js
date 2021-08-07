@@ -9,7 +9,7 @@ let o = 0
 let oCount = document.querySelector(`.toe-wins`)
 let draws = 0
 let drawCount = document.querySelector(`.draw-count`)
-let currentPlayer = 'x'
+let currentPlayer = null
 let playCount = []
 let oPositions = []
 let xPositions = []
@@ -17,6 +17,9 @@ let cells = document.getElementsByClassName(`cells`)
 let positionMatch = 0
 let newSec = document.createElement(`winner`)
 let script = document.querySelector(`script`)
+const volumeOn = document.getElementById(`volume-on`)
+const volumeOff = document.getElementById(`volume-off`)
+const gameAudio = document.getElementById(`game-audio`)
 const gameStart = document.querySelector(`h3`)
 const winCombos = [
   [0, 1, 2],
@@ -30,40 +33,21 @@ const winCombos = [
 ]
 
 ////////////////////////////////
-
 // Functions For Game Logic Here
 
-// Current Player Display Switch
+// Win/Draw Count
 function tally() {
   xCount.innerHTML = x
   oCount.innerHTML = o
   drawCount.innerHTML = draws
 }
-tally()
 
+// Current Player Display Switch
 function playerSwitch() {
   if (currentPlayer === 'x') {
-    document.querySelector('p').innerText = 'Ticks Turn'
-  } else document.querySelector('p').innerText = 'Toes Turn'
+    document.querySelector('p').innerText = "Tick's Turn"
+  } else document.querySelector('p').innerText = "Toe's Turn"
 }
-
-// Game Start
-const startGame = function (text) {
-  text.style.display = `none`
-  gameActive = true
-  currentPlayer = 'x'
-  playerSwitch()
-  tally()
-}
-
-// Board Reset
-let reset = function () {
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].innerHTML = ''
-  }
-}
-
-// Player Switch
 let switches = function (check) {
   if (check === xPositions) {
     currentPlayer = 'o'
@@ -73,6 +57,26 @@ let switches = function (check) {
     currentPlayer = 'x'
     playerSwitch()
     positionMatch = 0
+  }
+}
+
+// Game Start
+const startGame = function (text) {
+  text.style.display = `none`
+  gameActive = true
+  if (currentPlayer === 'o') {
+    currentPlayer = 'x'
+  } else if (currentPlayer === 'x') {
+    currentPlayer = 'o'
+  } else currentPlayer = 'x'
+  playerSwitch()
+  tally()
+}
+
+// Board Reset
+let reset = function () {
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].innerHTML = ''
   }
 }
 
@@ -92,7 +96,7 @@ let drawCheck = function () {
     addEndScreen(draw)
   }
 }
-// Win Check
+// Win || Draw Check/Win Counter Logic
 let winCheck = function (positionArray) {
   for (let i1 = 0; i1 < 8; i1++) {
     positionMatch = 0
@@ -135,9 +139,39 @@ let oClick = function (i) {
   winCheck(oPositions)
 }
 
+////////////////////////////////
 // Event Listeners Here
+
+//Volume Button Click Listener
+volumeOn.addEventListener(`click`, function () {
+  volumeOff.style.display = 'flex'
+  volumeOff.style.opacity = 1
+  gameAudio.pause()
+  gameAudio.currentTime = 0
+  volumeOn.style.display = 'none'
+  volumeOff.style.pointerEvents = 'all'
+})
+volumeOff.addEventListener(`click`, function () {
+  volumeOn.style.display = 'flex'
+  volumeOff.style.display = 'none'
+  volumeOff.style.opacity = 0
+  gameAudio.play()
+})
+volumeOn.addEventListener('mouseover', function () {
+  volumeOff.style.display = 'flex'
+  volumeOff.style.opacity = 0.35
+})
+volumeOn.addEventListener('mouseout', function () {
+  if (gameAudio.currentTime > 0) {
+    volumeOff.style.display = 'none'
+    volumeOff.style.opacity = 1
+  }
+})
+//Start Screen Click Listeners
+
 gameStart.addEventListener('click', function () {
   startGame(start)
+  gameAudio.play()
 })
 document.getElementById(`win`).addEventListener('click', function () {
   startGame(winner)
@@ -146,6 +180,7 @@ document.getElementById(`draw`).addEventListener('click', function () {
   startGame(draw)
 })
 
+//Board Click Listener
 for (let i = 0; i < cells.length; i++) {
   cells[i].addEventListener('click', function (event) {
     if (currentPlayer === 'x' && playCount.indexOf(i) === -1) {
@@ -155,5 +190,3 @@ for (let i = 0; i < cells.length; i++) {
     }
   })
 }
-////////////////////////////////
-////////////////////////////////
