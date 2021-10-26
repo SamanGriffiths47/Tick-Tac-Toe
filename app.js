@@ -19,6 +19,7 @@ let newSec = document.createElement(`winner`)
 let script = document.querySelector(`script`)
 const volumeOn = document.getElementById(`volume-on`)
 const volumeOff = document.getElementById(`volume-off`)
+const volume = document.getElementsByClassName(`volume`)
 const gameAudio = document.getElementById(`game-audio`)
 const gameStart = document.querySelector(`h3`)
 const winCombos = [
@@ -143,26 +144,30 @@ let oClick = function (i) {
 // Event Listeners Here
 
 //Volume Button Click Listener
-volumeOn.addEventListener(`click`, function () {
-  volumeOff.style.display = 'flex'
-  volumeOff.style.opacity = 1
-  gameAudio.pause()
-  gameAudio.currentTime = 0
-  volumeOn.style.display = 'none'
-  volumeOff.style.pointerEvents = 'all'
-})
-volumeOff.addEventListener(`click`, function () {
-  volumeOn.style.display = 'flex'
-  volumeOff.style.display = 'none'
-  volumeOff.style.opacity = 0
-  gameAudio.play()
-})
+for (let i = 0; i < volume.length; i++) {
+  volume[i].addEventListener(`click`, function (e) {
+    if (e.target.id === 'volume-on') {
+      volumeOn.style.display = 'none'
+      volumeOff.style.pointerEvents = 'all'
+      volumeOff.style.display = 'flex'
+      volumeOff.style.opacity = 1
+      gameAudio.pause()
+      gameAudio.currentTime = 0
+    } else {
+      volumeOff.style.pointerEvents = 'none'
+      volumeOn.style.display = 'flex'
+      volumeOff.style.display = 'none'
+      volumeOff.style.opacity = 0
+      gameAudio.play()
+    }
+  })
+}
 volumeOn.addEventListener('mouseover', function () {
   volumeOff.style.display = 'flex'
   volumeOff.style.opacity = 0.35
 })
 volumeOn.addEventListener('mouseout', function () {
-  if (gameAudio.currentTime > 0) {
+  if (volumeOn.style.display !== `none`) {
     volumeOff.style.display = 'none'
     volumeOff.style.opacity = 1
   }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tick-Tac-Toe</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body class='body'>
     
@@ -34,15 +34,18 @@
       <div class='tick9 cells'></div>
     </section>
     
-    <img src="./images/volume-on.png" alt="volume" id="volume-off" class="volume">
     <img src="./images/volume-off.png" alt="volume" id="volume-on" class="volume">
+    <img src="./images/volume-on.png" alt="volume" id="volume-off" class="volume">
     <audio id='game-audio' loop = 'loop' type = "audio/mp3">
       <source src="./images/happy.mp3" type = "audio/mp3" loop = 'loop'>
   </audio>
-    <start class='start-message'>
-      <h3 class="start">Start</h3>
+    <start class='startMessage'>
+      <div>
+        <h3 class="start">Start</h3>
+        <p class="msg">(Warning: Music Will Play)</p>
+      </div>
     </start>
-    <winner>
+    <winner> 
       <div class="winner">
         <h3>Winner!</h3>
         <p id="win">replay</p>
@@ -54,7 +57,7 @@
         <p id="draw">replay</p>
       </div>
     </draw>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     
   </body>
   </html>
