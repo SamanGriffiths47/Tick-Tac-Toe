@@ -1,4 +1,5 @@
 # Tick-Tac-Toe
+### Created By: Sam'an Griffiths
 
 ![Gameplay Screenshot](./images/GameplayScreenshot.png)
 
