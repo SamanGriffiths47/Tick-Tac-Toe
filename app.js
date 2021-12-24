@@ -1,7 +1,7 @@
 // Global Variables Here
-let start = document.getElementsByTagName('start')[0]
-let winner = document.getElementsByTagName('winner')[0]
-let draw = document.getElementsByTagName('draw')[0]
+const start = document.getElementsByTagName('start')[0]
+const winner = document.getElementsByTagName('win')[0]
+const draw = document.getElementsByTagName('draw')[0]
 let gameActive = null
 let x = 0
 let xCount = document.querySelector(`.tick-wins`)
@@ -15,8 +15,6 @@ let oPositions = []
 let xPositions = []
 let cells = document.getElementsByClassName(`cells`)
 let positionMatch = 0
-let newSec = document.createElement(`winner`)
-let script = document.querySelector(`script`)
 const volumeOn = document.getElementById(`volume-on`)
 const volumeOff = document.getElementById(`volume-off`)
 const volume = document.getElementsByClassName(`volume`)
@@ -35,7 +33,6 @@ const winCombos = [
 
 ////////////////////////////////
 // Functions For Game Logic Here
-
 // Win/Draw Count
 function tally() {
   xCount.innerHTML = x
@@ -108,7 +105,6 @@ let winCheck = function (positionArray) {
       if (positionMatch > 2) {
         if (currentPlayer === 'x' && xPositions.length > oPositions.length) {
           x = x + 1
-          console.log(positionMatch)
         } else if ((currentPlayer = 'o')) {
           o = o + 1
         }
@@ -127,13 +123,13 @@ let winCheck = function (positionArray) {
 }
 
 // Board Click Functions
-let xClick = function (i) {
+let xClick = function (event, i) {
   event.target.innerHTML = `<img class='tick-sb' src='./images/tick.png' alt='tick'></div>`
   xPositions.push(i)
   playCount.push(i)
   winCheck(xPositions)
 }
-let oClick = function (i) {
+let oClick = function (event, i) {
   event.target.innerHTML = `<img class='toe-sb' src='./images/big-toe.png' alt='toe'>`
   oPositions.push(i)
   playCount.push(i)
@@ -178,10 +174,10 @@ gameStart.addEventListener('click', function () {
   startGame(start)
   gameAudio.play()
 })
-document.getElementById(`win`).addEventListener('click', function () {
+document.getElementById(`winReplay`).addEventListener('click', function () {
   startGame(winner)
 })
-document.getElementById(`draw`).addEventListener('click', function () {
+document.getElementById(`drawReplay`).addEventListener('click', function () {
   startGame(draw)
 })
 
@@ -189,9 +185,9 @@ document.getElementById(`draw`).addEventListener('click', function () {
 for (let i = 0; i < cells.length; i++) {
   cells[i].addEventListener('click', function (event) {
     if (currentPlayer === 'x' && playCount.indexOf(i) === -1) {
-      xClick(i)
+      xClick(event, i)
     } else if (currentPlayer === 'o' && playCount.indexOf(i) === -1) {
-      oClick(i)
+      oClick(event, i)
     }
   })
 }
