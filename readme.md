@@ -19,4 +19,4 @@ My favorite code block is the logic that defines and checks for wins and draws. 
 
 
 ## Final Words
-Thank you so much for taking time out of your day to delve this deep into my portfolio, haha! Please, don't hesitate to connect with me on [LinkedIn](https://www.linkedin.com/in/saman-khaliq/) and hit my inbox for a chat. If you're interested, check out the gameplay on the web page I deployed with surge [here](http://tick-tac-toe.surge.sh/). Take a peek at my [portfolio](https://www.samankhaliq.com/) website if you want to see more of my projects, maybe check out some of my more complex work. Have a blessed day!
+Thank you so much for taking time out of your day to delve this deep into my portfolio, haha! Please, don't hesitate to connect with me on [LinkedIn](https://www.linkedin.com/in/saman-khaliq/) and hit my inbox for a chat. If you're interested, check out the gameplay on the web page I deployed with surge [here](http://tick-tac-toe.surge.sh/). Take a peek at my [portfolio](https://www.samanhg.com/) website if you want to see more of my projects, maybe check out some of my more complex work. Have a blessed day!
