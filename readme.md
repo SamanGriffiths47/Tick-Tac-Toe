@@ -3,18 +3,18 @@
 
 ![Gameplay Screenshot](./images/GameplayScreenshot.png)
 
-##### - [Overview](#brief)
+##### - [Overview](#overview)
 
-##### - [My Favorite Code Block](#favCode)
+##### - [My Favorite Code Block](#my-favorite-code-block)
 
-##### - [Final Words](#final)
+##### - [Final Words](#final-words)
 
-##### - [Getting Started](#start)
+##### - [Getting Started](#getting-started)
 
-## Overview {#brief}
+## Overview
 Tick-Tac-Toe! Obviously, I got a little punny with the title and animation on this one. This project was my first attempt at a game engine; and the functions that might fuel it. I'm very proud of how this turned out, as this was only the 4th time I'd built a web page from blank to interactive. The experience as a whole helped me to solidify the basic principles of working with vanilla javascript. I'm also proud of myself for learning how to incorporate music into a web page on my own. This was one of the first coding skills that I ventured to learn on my own!
 
-## My Favorite Code Block {#favCode}
+##  My Favorite Code Block
 
 <div align=center>
 
