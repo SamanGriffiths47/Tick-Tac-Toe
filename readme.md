@@ -3,13 +3,19 @@
 
 ![Gameplay Screenshot](./images/GameplayScreenshot.png)
 
-##### - [Overview](#over)
+##### - [Play The Game :joystick:](http://tick-tac-toe.surge.sh/)
 
-##### - [My Favorite Code Block](#fav)
+##### - [Check Out My Portfolio :scroll:](https://www.samanhg.com/)
 
-##### - [Final Words](#final)
+##### - [Connect With Me On LinkedIn :bust_in_silhouette:](https://www.linkedin.com/in/saman-khaliq/)
 
-##### - [Getting Started](#start)
+##### - [Overview :clipboard:](#over)
+
+##### - [My Favorite Code Block :smiling_face_with_three_hearts:](#fav)
+
+##### - [Final Words :speaking_head:](#final)
+
+##### - [Getting Started 🚦](#start)
 
 ## Overview :card_index_dividers: <p id='over'/>
 
