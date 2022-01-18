@@ -30,7 +30,7 @@ Thank you so much for taking time out of your day to delve this deep into my por
 
 &ensp;
 
-## :vertical_traffic_light: Getting Started :vertical_traffic_light: <p id='start'/>
+## Getting Started :vertical_traffic_light: <p id='start'/>
 	
 - Fork the Repository
 	
