@@ -5,7 +5,7 @@
 
 <div align=center>
 
-##### [Play The Game :joystick:](http://tick-tac-toe.surge.sh/) | [Check Out My Portfolio :scroll:](https://www.samanhg.com/) | [Connect With Me On LinkedIn :bust_in_silhouette:](https://www.linkedin.com/in/saman-khaliq/) | [Overview :clipboard:](#over) | [My Favorite Code Block :smiling_face_with_three_hearts:](#fav) | [Final Words :speaking_head:](#final) | [Getting Started 🚦](#start)
+##### [Play The Game :joystick:](http://tick-tac-toe.surge.sh/) | [Check Out My Portfolio :scroll:](https://www.samanhg.com/) | [Connect With Me On LinkedIn :bust_in_silhouette:](https://www.linkedin.com/in/saman-khaliq/) | [Overview :clipboard:](#over) <br/> [My Favorite Code Block :smiling_face_with_three_hearts:](#fav) | [Final Words :speaking_head:](#final) | [Getting Started 🚦](#start)
 
 </div>
 
